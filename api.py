@@ -41,9 +41,7 @@ def search_wallpapers(query, per_page=15):
         )
 
     except requests.exceptions.RequestException as e:
-        raise ApiError(
-            f"Network error while contacting Wallpapers.com: {e}"
-        )
+        raise ApiError(f"Network error while contacting Wallpapers.com: {e}")
 
     if response.status_code == 404:
         raise ApiError(
@@ -52,9 +50,7 @@ def search_wallpapers(query, per_page=15):
         )
 
     if response.status_code == 429:
-        raise ApiError(
-            "Wallpapers.com rate limit reached. Please try again later."
-        )
+        raise ApiError("wallpapers.com rate limit reached. Please try again later.")
 
     if response.status_code != 200:
         raise ApiError(
@@ -69,7 +65,7 @@ def search_wallpapers(query, per_page=15):
             "Wallpapers.com returned an invalid response."
         )
 
-    # Wallpapers.com puts the results inside "items".
+    
     wallpapers = data.get("items", [])
 
     if not wallpapers:
@@ -86,7 +82,7 @@ def search_wallpapers(query, per_page=15):
 
         wallpaper_id = item.get("id")
 
-        # "high" is the actual image.
+        
         image_url = item.get("high")
 
         if wallpaper_id is None or not image_url:
