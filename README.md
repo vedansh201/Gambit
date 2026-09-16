@@ -22,11 +22,11 @@ How to set it up:
 Option 1: Download the app
 
 1. Go to the "Releases" section of this repository.
-2. Download the latest `Gambit.exe`.
-3. Run `Gambit.exe`.
-4. Choose the type of wallpapers you want.
-5. Choose the folder where you want Gambit to save downloaded wallpapers.
-6. Click CHANGE WALLPAPER.
+2. Download and Unzip the Gambit.zip file provided.
+4. Run `Gambit.exe`.
+5. Choose the type of wallpapers you want.
+6. Choose the folder where you want Gambit to save downloaded wallpapers.
+7. Click CHANGE WALLPAPER.
 
 Option 2: Run from source
 
