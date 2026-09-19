@@ -1,4 +1,8 @@
 .env
 settings.json
+wallpapers/
 __pycache__/
 *.pyc
+build/
+dist/
+*.spec
